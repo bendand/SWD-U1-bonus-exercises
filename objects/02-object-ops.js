@@ -82,6 +82,33 @@ for (let restaurant of restaurants) {
 		- Loop back through, this time printing a template literal that uses the values for each object.
 */
 
+let cat1 = {
+	name: 'Tim',
+	age: 6,
+	color: 'orange',
+	breed: 'tabby',
+	favoriteFoods: ['fancy feast', 'tuna treats']
+}
+
+let cat2 = {
+	name: 'Seraph',
+	age: 8,
+	color: 'black and white',
+	breed: 'domestic longhair',
+	favoriteFoods: ['dry food', 'salmon treats']
+}
+
+let cats = [cat1, cat2];
+
+for (let i = 0; i < cats.length; i++) {
+	let cat = cats[i];
+	for (let key in cat) {
+		if (Array.isArray(key)) {
+			console.log(key[0]);
+		}
+	}
+}
+
 /*
 	Create two objects representing different local attractions (zoo, gardens, museums, etc), each with the following properties: name, location, adultTicketPrice, childTicketPrice, and famousFeatures (array of three strings). Be creative! Place the objects in an array.
 */
