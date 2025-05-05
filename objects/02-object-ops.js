@@ -99,6 +99,7 @@ let cat2 = {
 }
 
 let cats = [cat1, cat2];
+console.log(cats);
 
 for (let i = 0; i < cats.length; i++) {
 	let cat = cats[i];

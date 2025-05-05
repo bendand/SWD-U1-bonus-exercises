@@ -233,3 +233,27 @@ console.log(cokeZero instanceof Juice);
 */
 
 
+class Milk extends Beverage {
+    constructor(name, ounces, container, source, isNonDairy=false, flavoring=null) {
+        super(name, ounces, container);
+        this.source = source;
+        this.isNonDairy = isNonDairy;
+        this.flavoring = flavoring
+    }
+
+    describe() {
+        super.describe();
+        const flavoring = this.flavoring ? `${this.flavoring} flavoring` : 'no flavoring';
+        const isDairy = !this.isNonDairy ? 'contains dairy' : 'does not contain dairy';
+        const description = `${this.name} is a product derived from ${this.source} that has ${flavoring} and ${isDairy}`
+
+        return description;
+    }
+}
+
+
+let milk = new Milk('milk', 12, 'bottle', 'cows', false);
+
+milk.describe();
+
+
